@@ -1,0 +1,24 @@
+server:
+  port: 8088
+
+# swagger 页面开关
+swagger2:
+  base-package: com.example.springboot.controller
+  description: 用户管理
+  title: 用户管理
+  version: 1.0
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowMultiQueries=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.example.springboot.entity
+  configuration:
+#    打印SQL语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  config-location: classpath:mybatis-config.xml
